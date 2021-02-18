@@ -4,7 +4,7 @@ import {Context} from '../context/BlogContext';
 
 // import { Container } from './styles';
 
-const CreateScreen = () => {
+const CreateScreen = ({navigation}) => {
     const [title,setTitle] = useState('');
     const [content, setContent] = useState('');
     const {addBlogPost} = useContext(Context);
@@ -15,7 +15,7 @@ const CreateScreen = () => {
       <TextInput style={styles.input} value={content} onChangeText={text => setContent(text)}/>
       <Button 
         title={'Add Blog Post'}
-        onPress={()=> addBlogPost(title, content)}
+        onPress={()=> addBlogPost(title, content,()=>navigation.navigate('Index'))}
         />
   </View>;
 }
