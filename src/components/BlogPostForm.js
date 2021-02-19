@@ -4,9 +4,6 @@ import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
 const BlogPostForm = ({onSubmit, initialValues}) => {
     const [title,setTitle] = useState(initialValues.title);
     const [content, setContent] = useState(initialValues.content);
-    console.log(initialValues);
-    console.log(title);
-    console.log(content);
 
   return <View>
   <Text style={styles.label}>Enter Title:</Text>
